@@ -38,6 +38,15 @@ H2 settings:
 mvn test
 ```
 
+## Troubleshooting
+- H2 console login fails with database not found:
+	- Use JDBC URL: `jdbc:h2:mem:bookauthordb`
+	- Do not use the default `jdbc:h2:~/test`
+	- Ensure the app is running before opening H2 console
+- JSP pages fail with JSTL class errors:
+	- Ensure JSTL API and implementation dependencies are present in `pom.xml`
+	- This project already includes the required JSTL dependencies
+
 ## Main Endpoints
 ### Books
 - `GET /books/add`
